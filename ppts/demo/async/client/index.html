@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="jquery-2.1.1.js"></script>
+	<title>Document</title>
+</head>
+<body>
+	<button id="btn">点我请求</button>
+	<p id="result"></p>
+	<script type="text/javascript">
+
+	$('#btn').on('click',function(){//事件驱动
+		$.ajax({//异步调用
+			url: 'http://localhost:8000',
+			method: 'GET',
+			success: function(data){
+				console.log('收到Ajax返回');
+				console.log(data);
+				$('#result').text(data);
+			}
+		});
+		console.log('发送Ajax请求');
+	});
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+.file-setting{
+    color: yellow;
+}
+.text-md{
+	font-size: 18px;
+}
+#incallback,#outcallback{
+    margin-top:10px;
+    background-color: rgba(0,0,0,.5);
+}
